@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — МобилЛинк</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="logo">МобилЛинк</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h1>Контакты</h1>
+        <div class="table-wrap" style="margin-bottom: 40px;">
+          <table>
+            <tbody>
+              <tr><td>Телефон</td><td>8 800 123-45-67 (бесплатно по России)</td></tr>
+              <tr><td>E-mail</td><td>info@mobillink.ru</td></tr>
+              <tr><td>Адрес</td><td>г. Москва, ул. Тверская, д. 10, офис 501</td></tr>
+              <tr><td>Режим работы офиса</td><td>Пн–Пт: 09:00–19:00, Сб: 10:00–16:00</td></tr>
+              <tr><td>Поддержка</td><td>Круглосуточно по телефону и e-mail</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Оставить заявку</h2>
+        <form onsubmit="event.preventDefault(); alert('Заявка отправлена (демо).');">
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Иван Иванов" required>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="example@mail.ru">
+          </div>
+          <div class="field">
+            <label for="msg">Сообщение</label>
+            <textarea id="msg" name="msg" rows="4" placeholder="Ваш вопрос..."></textarea>
+          </div>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 МобилЛинк. Телефон: 8 800 123-45-67. E-mail: info@mobillink.ru</p>
+    </div>
+  </footer>
+</body>
+</html>

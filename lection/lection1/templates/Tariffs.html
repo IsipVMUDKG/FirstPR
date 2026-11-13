@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарифные планы — МобилЛинк</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="logo">МобилЛинк</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <h1>Тарифные планы</h1>
+        <p>Выберите подходящий тариф. Цены на звонки указаны в рублях за минуту, на СМС — в рублях за сообщение.</p>
+
+        <div class="cards" style="margin-top: 32px;">
+          <!-- Базовый -->
+          <div class="tariff-card">
+            <h3>Базовый</h3>
+            <div class="price">2 ₽ <span>/ мин</span></div>
+            <ul>
+              <li>Звонки по России — 2 ₽/мин</li>
+              <li>Внутрисетевые — 1 ₽/мин</li>
+              <li>СМС внутри сети — 1 ₽</li>
+            </ul>
+            <button class="btn btn-block" type="button">Подключить</button>
+          </div>
+
+          <!-- Бизнес -->
+          <div class="tariff-card featured">
+            <h3>Бизнес</h3>
+            <div class="price">1 ₽ <span>/ мин</span></div>
+            <ul>
+              <li>Звонки по России — 1 ₽/мин</li>
+              <li>Внутрисетевые — 0 ₽/мин</li>
+              <li>СМС внутри сети — 0 ₽</li>
+            </ul>
+            <button class="btn btn-block" type="button">Подключить</button>
+          </div>
+
+          <!-- Премиум -->
+          <div class="tariff-card">
+            <h3>Премиум</h3>
+            <div class="price">0 ₽ <span>/ мин</span></div>
+            <ul>
+              <li>Звонки по России — 0 ₽/мин</li>
+              <li>Внутрисетевые — 0 ₽/мин</li>
+              <li>СМС по России — 0 ₽</li>
+            </ul>
+            <button class="btn btn-block" type="button">Подключить</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Стоимость звонков, руб. за минуту</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Направление</th>
+                <th style="text-align: center;">Базовый</th>
+                <th style="text-align: center;">Бизнес</th>
+                <th style="text-align: center;">Премиум</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Входящие</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
+              <tr><td>Исходящие</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr>
+              <tr><td>Внутрисетевые</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+              <tr><td>Междугородние</td><td class="num">5</td><td class="num">3</td><td class="num">2</td></tr>
+              <tr><td>Международные</td><td class="num">15</td><td class="num">10</td><td class="num">5</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Стоимость СМС, руб. за сообщение</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Направление</th>
+                <th style="text-align: center;">Базовый</th>
+                <th style="text-align: center;">Бизнес</th>
+                <th style="text-align: center;">Премиум</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Входящие</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+              <tr><td>Исходящие</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr>
+              <tr><td>Внутрисетевые</td><td class="num">1</td><td class="num">0</td><td class="num">0</td></tr>
+              <tr><td>Междугородние</td><td class="num">3</td><td class="num">2</td><td class="num">1</td></tr>
+              <tr><td>Международные</td><td class="num">10</td><td class="num">8</td><td class="num">5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px; margin-top: -16px;">Цены указаны в рублях. Подключение тарифа бесплатно. Актуальные условия уточняйте у оператора.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 МобилЛинк. Телефон: 8 800 123-45-67. E-mail: info@mobillink.ru</p>
+    </div>
+  </footer>
+</body>
+</html>
