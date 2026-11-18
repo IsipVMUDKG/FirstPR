@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список менеджеров</title>
+</head>
+<body>
+    <h1>Список менеджеров</h1>
+<a href="{% url 'mendgeri_create' %}">Добавить менеджера</a>
+<ul>
+    {% for manager in object_list %}
+        <li>
+            <a href="{% url 'mendgeri_detail' manager.pk %}">{{ manager.Familya }} {{ manager.Imya }}</a>
+            | <a href="{% url 'mendgeri_update' manager.pk %}">Редактировать</a>
+            | <a href="{% url 'mendgeri_delete' manager.pk %}">Удалить</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

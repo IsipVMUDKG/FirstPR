@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифные планы</title>
+</head>
+<body>
+    <h1>Тарифные планы</h1>
+<a href="{% url 'tarif_create' %}">Добавить тариф</a>
+<ul>
+    {% for tarif in object_list %}
+        <li>
+            <a href="{% url 'tarif_detail' tarif.pk %}">{{ tarif.Naimenovanie_plana }}</a>
+            | <a href="{% url 'tarif_update' tarif.pk %}">Редактировать</a>
+            | <a href="{% url 'tarif_delete' tarif.pk %}">Удалить</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

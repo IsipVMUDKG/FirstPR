@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали клиента</title>
+</head>
+<body>
+    <h1>{{ clienti.Familia }} {{ clienti.Imya }} {{ clienti.Otchestvo }}</h1>
+<p>Город: {{ clienti.Gorod_Projuvania }}</p>
+<p>Возраст: {{ clienti.Vozrast_Let }}</p>
+<p>Описание: {{ clienti.Opisanie }}</p>
+<p>Тип клиента: {{ clienti.ID_Type_Client }}</p>
+
+<!-- Вывод фото -->
+{% if clienti.photo %}
+    <img src="{{ clienti.photo.url }}" alt="Фото клиента" width="300">
+{% else %}
+    <p>Фото отсутствует</p>
+{% endif %}
+<br><br>
+<a href="{% url 'clienti_update' clienti.pk %}">Редактировать</a> | 
+<a href="{% url 'clienti_list' %}">Вернуться к списку</a>
+</body>
+</html>

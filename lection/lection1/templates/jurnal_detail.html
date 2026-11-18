@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали звонка</title>
+</head>
+<body>
+    <h1>Детали звонка</h1>
+<p>Подключение (абонент): {{ jurnal.ID_Podchenie_nomera }}</p>
+<p>Номер собеседника: {{ jurnal.Nomer_s_kem_soedinenia }}</p>
+<p>Дата: {{ jurnal.Date_zvonka }}</p>
+<p>Стоимость: {{ jurnal.Stoimost_zvonka }} руб.</p>
+<br>
+<a href="{% url 'jurnal_update' jurnal.pk %}">Редактировать</a> | 
+<a href="{% url 'jurnal_list' %}">Вернуться к списку</a>
+</body>
+</html>

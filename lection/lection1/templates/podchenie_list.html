@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подключенные номера</title>
+</head>
+<body>
+    <h1>Подключенные номера</h1>
+<a href="{% url 'podchenie_create' %}">Добавить подключение</a>
+<ul>
+    {% for pod in object_list %}
+        <li>
+            <a href="{% url 'podchenie_detail' pod.pk %}">Подключение №{{ pod.pk }} (Клиент: {{ pod.ID_Clienti }})</a>
+            | <a href="{% url 'podchenie_update' pod.pk %}">Редактировать</a>
+            | <a href="{% url 'podchenie_delete' pod.pk %}">Удалить</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

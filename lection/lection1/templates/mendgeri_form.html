@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с менеджерами</title>
+</head>
+<body>
+    {% if object %}
+    <h1>Редактировать менеджера</h1>
+{% else %}
+    <h1>Добавить менеджера</h1>
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'mendgeri_list' %}">Отмена</a>
+</body>
+</html>

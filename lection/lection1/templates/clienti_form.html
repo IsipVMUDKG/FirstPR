@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с клиентами</title>
+</head>
+<body>
+    {% if object %}
+    <h1>Редактировать клиента</h1>
+{% else %}
+    <h1>Добавить клиента</h1>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'clienti_list' %}">Отмена</a>
+</body>
+</html>

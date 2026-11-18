@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Журнал звонков</title>
+</head>
+<body>
+    <h1>Журнал звонков</h1>
+<a href="{% url 'jurnal_create' %}">Добавить запись</a>
+<ul>
+    {% for call in object_list %}
+        <li>
+            <a href="{% url 'jurnal_detail' call.pk %}">Звонок на {{ call.Nomer_s_kem_soedinenia }} ({{ call.Date_zvonka }})</a>
+            | <a href="{% url 'jurnal_update' call.pk %}">Редактировать</a>
+            | <a href="{% url 'jurnal_delete' call.pk %}">Удалить</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

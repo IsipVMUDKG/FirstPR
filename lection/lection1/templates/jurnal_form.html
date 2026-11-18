@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа со звонками</title>
+</head>
+<body>
+    {% if object %}
+    <h1>Редактировать запись звонка</h1>
+{% else %}
+    <h1>Добавить запись звонка</h1>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохранить</button>
+</form>
+<a href="{% url 'jurnal_list' %}">Отмена</a>
+</body>
+</html>

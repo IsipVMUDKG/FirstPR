@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали менеджера</title>
+</head>
+<body>
+    <h1>{{ mendgeri.Familya }} {{ mendgeri.Imya }} {{ mendgeri.Otchestvo }}</h1>
+<p>Зарплата в месяц: {{ mendgeri.Stoimost_v_mesaz }} руб.</p>
+
+{% if mendgeri.photo %}
+    <img src="{{ mendgeri.photo.url }}" alt="Фото менеджера" width="300">
+{% else %}
+    <p>Фото отсутствует</p>
+{% endif %}
+<br><br>
+<a href="{% url 'mendgeri_update' mendgeri.pk %}">Редактировать</a> | 
+<a href="{% url 'mendgeri_list' %}">Вернуться к списку</a>
+</body>
+</html>
